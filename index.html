@@ -1,0 +1,111 @@
+<!--Kevin Lin Seniors 83 EVEN 10/1/21
+
+    I think the level 1 was not bad. It taught us the basics of html. The whole level didn't feel introductory though. It just felt like a basics of html teaching class. I wish for more of like explanation of things. There should be examples or "model projects" of the level 1 projects. Although the instructions were very clear, we didn't know what kind of project to produce. We can make something totally out of the ordinary or just be super basic with the proeject. I learned a lot from level 1 and doing the project. This is especially true with images and buttons. It expanded my knowledge of html and made me excited for whats to come. Most of the time I spent debugging were just me finding words that I have mistyped and wasting 30 minutes of scratching my head on nothing.-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kevin Goblin Game</title>
+        <script>
+
+            winCondition = 9;
+            onePile = 3;
+            twoPile = 3;
+            threePile = 3;
+
+            function change1stImage()
+            {
+                winCondition--;
+                onePile--;
+                if (onePile == 2)
+                {
+                    var img1 = document.getElementById("pile1");
+                    img1.src="2 Stones.png";
+                }
+                if (onePile == 1)
+                {
+                    var img1 = document.getElementById("pile1");
+                    img1.src="1 Stone.png";
+                }
+                if (onePile == 0)
+                {
+                    var img1 = document.getElementById("pile1");
+                    img1.src="No Stone.png";
+                }
+                if (winCondition <= 0)
+                {
+                    var img1 = document.getElementById("pile1");
+                    img1.src="You Lose.png";
+                } 
+            }
+
+            function change2ndImage()
+            {
+                winCondition--;
+                twoPile--;
+                if (twoPile == 2)
+                {
+                    var img1 = document.getElementById("pile2");
+                    img1.src="2 Stones.png";
+                }
+                if (twoPile == 1)
+                {
+                    var img1 = document.getElementById("pile2");
+                    img1.src="1 Stone.png";
+                }
+                if (twoPile == 0)
+                {
+                    var img1 = document.getElementById("pile2");
+                    img1.src="No Stone.png";
+                }
+                if (winCondition <= 0)
+                {
+                    var img1 = document.getElementById("pile2");
+                    img1.src="You Lose.png";
+                }
+            }
+
+            function change3rdImage()
+            {
+                winCondition--;
+                threePile--;
+                if (threePile == 2)
+                {
+                    var img1 = document.getElementById("pile3");
+                    img1.src="2 Stones.png";
+                }
+                if (threePile == 1)
+                {
+                    var img1 = document.getElementById("pile3");
+                    img1.src="1 Stone.png";
+                }
+                if (threePile == 0)
+                {
+                    var img1 = document.getElementById("pile3");
+                    img1.src="No Stone.png";
+                }
+                if (winCondition <= 0)
+                {
+                    var img1 = document.getElementById("pile3");
+                    img1.src="You Lose.png";
+                } 
+                
+            }
+
+        </script>
+    </head>
+
+    <h1>
+        <img id="pile1" src="3 Stones.jpg" class="center" height="200px" width="200px">
+        <button id="take1stpile" onclick="change1stImage();">Take Stone</button>
+    </h1>
+
+    <h1>
+        <img id="pile2" src="3 Stones.jpg" class="left" height="200px" width="200px">
+        <button id="take2ndpile" onclick="change2ndImage();">Take Stone</button>
+    </h1>
+
+    <h1>
+        <img id="pile3" src="3 Stones.jpg" class="right" height="200px" width="200px" >
+        <button id="take3rdpile" onclick="change3rdImage();">Take Stone</button>
+    </h1>
+</html>
